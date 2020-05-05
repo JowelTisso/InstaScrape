@@ -1,0 +1,2 @@
+rootProject.name='IScrape'
+include ':app'

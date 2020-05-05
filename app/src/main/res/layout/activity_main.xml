@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <ProgressBar
+        android:id="@+id/progress_horizontalX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        />
+
+    <EditText
+        android:id="@+id/link"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="address"
+        android:visibility="gone"
+        />
+
+    <ScrollView
+        android:id="@+id/scrollViewtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/link">
+
+        <EditText
+            android:id="@+id/textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollWeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scrollViewtext"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/addressbar"
+                    android:layout_weight="5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:text="https://"
+                    />
+
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/webviewChangestate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="state"
+                    />
+            </LinearLayout>
+
+            <WebView
+                android:id="@+id/web_view"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_below="@id/addressbar"
+                android:visibility="visible"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/web_view">
+
+
+                <EditText
+                    android:id="@+id/input"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:inputType="number"
+                    android:text="1000"
+                    />
+
+                <Button
+                    android:id="@+id/btn_scroll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scroll" />
+
+                <Button
+                    android:id="@+id/btn_getLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GetLink" />
+
+                <Button
+                    android:id="@+id/btn_toJsoup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="To Jsoup" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/scrollWeb"
+        android:gravity="center"
+        >
+        <EditText
+            android:id="@+id/loopCount"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:inputType="number"
+            android:text="1"
+            />
+        <Button
+            android:id="@+id/btnClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="get html " />
+        <Button
+            android:id="@+id/btnStopTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Stop " />
+
+
+    </LinearLayout>
+</LinearLayout>
