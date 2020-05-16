@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +10,7 @@
     <ProgressBar
         android:id="@+id/progress_horizontalX"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="5dp"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         />
 
@@ -26,27 +26,16 @@
         android:id="@+id/scrollViewtext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/link">
+        android:layout_below="@id/link"
+        android:visibility="gone"
+        >
 
         <EditText
             android:id="@+id/textview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-
+            android:layout_height="wrap_content"
             />
     </ScrollView>
-
-    <ScrollView
-        android:id="@+id/scrollWeb"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/scrollViewtext"
-        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -56,11 +45,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
 
                 <EditText
                     android:id="@+id/addressbar"
-                    android:layout_weight="5"
+                    android:layout_weight="6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:inputType="textMultiLine"
@@ -69,18 +60,34 @@
                     />
 
                 <Button
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:id="@+id/webviewChangestate"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="state"
+                    android:layout_height="40dp"
+                    android:text="Refresh"
+                    android:textSize="10sp"
                     />
             </LinearLayout>
 
             <WebView
-                android:id="@+id/web_view"
+                android:id="@+id/web_view1"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/addressbar"
+                android:visibility="visible"
+                android:layout_margin="1dp"
+                />
+            <WebView
+                android:id="@+id/web_view2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/addressbar"
+                android:visibility="visible"
+                />
+            <WebView
+                android:id="@+id/web_view3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
                 android:layout_below="@id/addressbar"
                 android:visibility="visible"
                 />
@@ -88,67 +95,95 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_below="@id/web_view">
+                android:visibility="gone"
+                >
 
 
-                <EditText
-                    android:id="@+id/input"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:inputType="number"
-                    android:text="1000"
-                    />
 
-                <Button
-                    android:id="@+id/btn_scroll"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Scroll" />
 
-                <Button
-                    android:id="@+id/btn_getLink"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="GetLink" />
 
-                <Button
-                    android:id="@+id/btn_toJsoup"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="To Jsoup" />
+
+
+
+
             </LinearLayout>
 
         </LinearLayout>
-    </ScrollView>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_below="@id/scrollWeb"
         android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
         >
         <EditText
             android:id="@+id/loopCount"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="50dp"
+            android:layout_marginRight="5dp"
             android:inputType="number"
             android:text="1"
+            android:visibility="gone"
             />
         <Button
             android:id="@+id/btnClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="get html " />
+            android:text="get html "
+            android:textSize="10sp"
+            android:visibility="gone"
+            />
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:inputType="number"
+            android:text="1000"
+            />
+        <Button
+            android:id="@+id/btn_scroll"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="Scroll"
+            android:textSize="10sp"
+            />
+        <Button
+            android:id="@+id/btn_getLink"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="GetLink"
+            android:textSize="10sp"
+            />
+        <ToggleButton
+            android:id="@+id/btn_createsheet"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="Create sheet"
+            android:textSize="10sp"
+            />
+        <Button
+            android:id="@+id/btnSaveTask"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Save "
+            android:textSize="10sp"
+            />
         <Button
             android:id="@+id/btnStopTask"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="Stop " />
+            android:text="Stop"
+            android:textSize="10sp"
+            android:visibility="gone"
+            />
+
 
 
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>
