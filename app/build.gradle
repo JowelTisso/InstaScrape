@@ -58,6 +58,7 @@ dependencies {
     implementation files('libs/poi-3.9-20121203.jar')
     implementation files('libs/poi-ooxml-3.9-20121203.jar')
     implementation files('libs/poi-ooxml-schemas-3.9-20121203.jar')
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.3'
 }
 repositories {
     mavenCentral()

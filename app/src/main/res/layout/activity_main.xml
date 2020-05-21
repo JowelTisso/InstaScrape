@@ -7,183 +7,230 @@
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
     <ProgressBar
         android:id="@+id/progress_horizontalX"
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
 
     <EditText
-        android:id="@+id/link"
+        android:id="@+id/hashtag3"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_above="@id/bottombtnContainer"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginLeft="53dp"
+        android:background="#FFF"
+        android:hint="Hashtag3"
+        android:text="love" />
+
+    <EditText
+        android:id="@+id/hashtag4"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_above="@id/bottombtnContainer"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="41dp"
+        android:layout_marginRight="41dp"
+        android:background="#FFF"
+        android:hint="Hashtag4"
+        android:text="instagood" />
+
+    <EditText
+        android:id="@+id/hashtag1"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_above="@id/hashtag3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginLeft="54dp"
+        android:background="#FFF"
+        android:hint="Hashtag1"
+        android:text="gym" />
+
+    <EditText
+        android:id="@+id/hashtag2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_above="@id/hashtag4"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:background="#FFF"
+        android:hint="Hashtag2"
+        android:text="workout" />
+
+    <EditText
+        android:id="@+id/logTextView"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:hint="address"
-        android:visibility="gone"
-        />
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="#DCDFDE"
+        android:gravity="start"
+        android:hint="Update Log"
+        android:inputType="textNoSuggestions|textMultiLine"
+        android:padding="2dp"
+        android:textColor="#111C5A"
+        android:textSize="12sp" />
 
-    <ScrollView
-        android:id="@+id/scrollViewtext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/link"
-        android:visibility="gone"
-        >
-
-        <EditText
-            android:id="@+id/textview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-    </ScrollView>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:visibility="gone"
-                >
-
-                <EditText
-                    android:id="@+id/addressbar"
-                    android:layout_weight="6"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textMultiLine"
-                    android:textSize="14sp"
-                    android:text="https://"
-                    />
-
-                <Button
-                    android:layout_weight="2"
-                    android:id="@+id/webviewChangestate"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:text="Refresh"
-                    android:textSize="10sp"
-                    />
-            </LinearLayout>
-
-            <WebView
-                android:id="@+id/web_view1"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_below="@id/addressbar"
-                android:visibility="visible"
-                android:layout_margin="1dp"
-                />
-            <WebView
-                android:id="@+id/web_view2"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_below="@id/addressbar"
-                android:visibility="visible"
-                />
-            <WebView
-                android:id="@+id/web_view3"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_below="@id/addressbar"
-                android:visibility="visible"
-                />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:visibility="gone"
-                >
-
-
-
-
-
-
-
-
-
-            </LinearLayout>
-
-        </LinearLayout>
-
+    <EditText
+        android:id="@+id/emailTextView"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/logTextView"
+        android:layout_margin="10dp"
+        android:background="#DCDFDE"
+        android:gravity="start"
+        android:hint="Email Log"
+        android:inputType="textNoSuggestions|textMultiLine"
+        android:padding="2dp"
+        android:textColor="#111C5A"
+        android:textSize="12sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/logTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toEndOf="@+id/emailTextView"
+        android:layout_toRightOf="@+id/emailTextView"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/maxHeapMemory"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:hint="maxHeap" />
+
+        <TextView
+            android:id="@+id/allowedHeapMemory"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:hint="allowedHeap"
+            />
+        <TextView
+            android:id="@+id/freeHeapMemory"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:hint="freeHeap"
+            />
+        <TextView
+            android:id="@+id/coroutineCounts"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:hint="Counts"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/countTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailTextView"
+        android:layout_marginLeft="10dp"
+        android:text="Profiles Scraped" />
+
+    <TextView
+        android:id="@+id/scrapedCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailTextView"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/countTitle"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/emailCountTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailTextView"
+        android:layout_marginLeft="100dp"
+        android:layout_toRightOf="@id/scrapedCount"
+        android:text="Email Found" />
+
+    <TextView
+        android:id="@+id/emailCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailTextView"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/emailCountTitle"
+        android:text="0" />
+
+    <LinearLayout
+        android:id="@+id/bottombtnContainer"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:gravity="center"
         android:layout_alignParentBottom="true"
         android:background="@android:color/transparent"
-        >
-        <EditText
-            android:id="@+id/loopCount"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:inputType="number"
-            android:text="1"
-            android:visibility="gone"
-            />
+        android:gravity="center">
+
         <Button
-            android:id="@+id/btnClick"
+            android:id="@+id/btnModeSelector"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="get html "
-            android:textSize="10sp"
-            android:visibility="gone"
-            />
-        <EditText
-            android:id="@+id/input"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:inputType="number"
-            android:text="1000"
-            />
-        <Button
-            android:id="@+id/btn_scroll"
-            android:layout_width="65dp"
-            android:layout_height="wrap_content"
-            android:text="Scroll"
-            android:textSize="10sp"
-            />
-        <Button
-            android:id="@+id/btn_getLink"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="GetLink"
-            android:textSize="10sp"
-            />
+            android:text="lite" />
+
         <ToggleButton
-            android:id="@+id/btn_createsheet"
+            android:id="@+id/btn_tagOrlocation"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textOff="Location"
+            android:textOn="Hashtag"
+            android:textSize="10sp" />
+
+        <ToggleButton
+            android:id="@+id/btn_start"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:text="Create sheet"
-            android:textSize="10sp"
-            />
+            android:textOff="Start"
+            android:textOn="Stop"
+            android:textSize="10sp" />
+
         <Button
             android:id="@+id/btnSaveTask"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="Save "
-            android:textSize="10sp"
-            />
+            android:textSize="10sp" />
         <Button
-            android:id="@+id/btnStopTask"
-            android:layout_width="wrap_content"
+            android:id="@+id/btnNext"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="Stop"
-            android:textSize="10sp"
-            android:visibility="gone"
-            />
-
-
+            android:text="Next"
+            android:textSize="10sp" />
 
     </LinearLayout>
 </RelativeLayout>
