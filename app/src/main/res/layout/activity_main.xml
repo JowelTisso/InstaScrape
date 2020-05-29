@@ -1,154 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical"
+    android:background="?attr/primary_bg_color"
     tools:context=".MainActivity">
-
     <ProgressBar
         android:id="@+id/progress_horizontalX"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="match_parent"
-        android:layout_height="5dp" />
-
-    <EditText
-        android:id="@+id/hashtag3"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:layout_above="@id/bottombtnContainer"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="53dp"
-        android:layout_marginLeft="53dp"
-        android:background="#FFF"
-        android:hint="Hashtag3"
-        android:text="love" />
-
-    <EditText
-        android:id="@+id/hashtag4"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:layout_above="@id/bottombtnContainer"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
-        android:background="#FFF"
-        android:hint="Hashtag4"
-        android:text="instagood" />
-
-    <EditText
-        android:id="@+id/hashtag1"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:layout_above="@id/hashtag3"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="54dp"
-        android:layout_marginLeft="54dp"
-        android:background="#FFF"
-        android:hint="Hashtag1"
-        android:text="gym" />
-
-    <EditText
-        android:id="@+id/hashtag2"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:layout_above="@id/hashtag4"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        android:background="#FFF"
-        android:hint="Hashtag2"
-        android:text="workout" />
-
-    <EditText
-        android:id="@+id/logTextView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
-        android:background="#DCDFDE"
-        android:gravity="start"
-        android:hint="Update Log"
-        android:inputType="textNoSuggestions|textMultiLine"
-        android:padding="2dp"
-        android:textColor="#111C5A"
-        android:textSize="12sp" />
-
-    <EditText
-        android:id="@+id/emailTextView"
-        android:layout_width="250dp"
-        android:layout_height="200dp"
-        android:layout_below="@id/logTextView"
-        android:layout_margin="10dp"
-        android:background="#DCDFDE"
-        android:gravity="start"
-        android:hint="Email Log"
-        android:inputType="textNoSuggestions|textMultiLine"
-        android:padding="2dp"
-        android:textColor="#111C5A"
-        android:textSize="12sp" />
+        android:layout_height="7dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:indeterminate="true"
+        android:visibility="invisible" />
 
     <LinearLayout
+        android:id="@+id/topbar"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="15dp"
+        android:layout_below="@id/progress_horizontalX"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="-10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="1dp"
+            android:background="@drawable/red_icon_bg" />
+
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/orange_icon_bg" />
+
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/green_icon_bg" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_day_night_mode"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true"
+        android:paddingStart="5dp"
+        android:paddingTop="7dp">
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:contentDescription="DayNight Toggle Switch"
+            android:src="@drawable/daynight_icon_bg" />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/logTextView"
+        android:layout_height="210dp"
+        android:layout_width="match_parent"
+        android:layout_below="@id/topbar"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:gravity="start"
+        android:background="?attr/secondary_bg_color"
+        android:hint="Update Log"
+        android:elevation="3dp"
+        android:inputType="textNoSuggestions|textMultiLine"
+        android:fontFamily="@font/ubuntulight"
+        android:padding="3dp"
+        android:textColor="?attr/primary_text_color"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/btnMenu"
+        android:layout_width="75dp"
+        android:layout_height="18dp"
+        android:layout_below="@id/logTextView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-10dp"
+        android:fontFamily="@font/ubuntulight"
+        android:gravity="start|center_vertical"
+        android:paddingStart="12dp"
+        android:text="Menu"
+        android:textColor="@color/dirt_yellow"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/btnClearLog"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/heapContainer"
+        android:layout_below="@id/logTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-10dp"
+        android:layout_marginBottom="-10dp"
+        android:fontFamily="@font/ubuntulight"
+        android:gravity="end|center_vertical"
+        android:paddingEnd="10dp"
+        android:text="Clear Log"
+        android:textColor="@color/pink"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/topbar_email"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_below="@id/btnMenu"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="-10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="1dp"
+            android:background="@drawable/red_icon_bg" />
+
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/orange_icon_bg" />
+
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/green_icon_bg" />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/emailTextView"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@id/topbar_email"
+        android:layout_margin="10dp"
+        android:gravity="start"
+        android:hint="Email Log"
+        android:layout_toStartOf="@+id/heapContainer"
+        android:background="?attr/secondary_bg_color"
+        android:elevation="3dp"
+        android:fontFamily="@font/ubuntulight"
+        android:inputType="textNoSuggestions|textMultiLine|textEmailAddress"
+        android:padding="3dp"
+        android:textColor="?attr/secondary_text_color"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/heapContainer"
+        android:layout_width="100dp"
+        android:layout_height="180dp"
         android:layout_below="@+id/logTextView"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_toEndOf="@+id/emailTextView"
-        android:layout_toRightOf="@+id/emailTextView"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubunturegular"
+            android:text="Max Heap"
+            android:textColor="?attr/primary_text_color"
+            android:textSize="10sp" />
         <TextView
             android:id="@+id/maxHeapMemory"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="16sp"
-            android:hint="maxHeap" />
+            android:gravity="end|center_vertical"
+            android:hint="maxHeap"
+            android:text="135"
+            android:textColor="@color/brown"
+            android:textSize="16sp" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubunturegular"
+            android:text="Allowed Heap"
+            android:textColor="?attr/primary_text_color"
+            android:textSize="10sp" />
         <TextView
             android:id="@+id/allowedHeapMemory"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:textSize="16sp"
-            android:gravity="center"
+            android:gravity="end|center_vertical"
             android:hint="allowedHeap"
-            />
+            android:text="481"
+            android:textColor="@color/dirt_yellow"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubunturegular"
+            android:text="Free Heap"
+            android:textColor="?attr/primary_text_color"
+            android:textSize="10sp" />
         <TextView
             android:id="@+id/freeHeapMemory"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:textSize="16sp"
-            android:gravity="center"
+            android:gravity="end|center_vertical"
             android:hint="freeHeap"
-            />
+            android:text="158"
+            android:textColor="@color/cyan"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubunturegular"
+            android:text="Thread Loop"
+            android:textColor="?attr/primary_text_color"
+            android:textSize="10sp" />
         <TextView
             android:id="@+id/coroutineCounts"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:textSize="16sp"
-            android:gravity="center"
-            android:hint="Counts"
-            />
+            android:gravity="end|center_vertical"
+            android:hint="0"
+            android:text="0"
+            android:textColor="@color/pink"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <TextView
@@ -156,81 +247,256 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/emailTextView"
-        android:layout_marginLeft="10dp"
-        android:text="Profiles Scraped" />
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/ubuntulight"
+        android:text="Profiles Scraped"
+        android:textColor="?attr/primary_text_color"
+
+        />
 
     <TextView
         android:id="@+id/scrapedCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/emailTextView"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@id/countTitle"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/countTitle"
+        android:textColor="@color/brown"
         android:text="0" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="55dp"
+        android:textColor="@color/brown"
+        tools:targetApi="jelly_bean_mr1"
+
+        />
 
     <TextView
         android:id="@+id/emailCountTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/emailTextView"
-        android:layout_marginLeft="100dp"
-        android:layout_toRightOf="@id/scrapedCount"
-        android:text="Email Found" />
+        android:layout_toStartOf="@id/emailCount"
+        android:fontFamily="@font/ubuntulight"
+        android:text="Email Found"
+        android:textColor="?attr/primary_text_color" />
 
     <TextView
         android:id="@+id/emailCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
         android:layout_below="@id/emailTextView"
         android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@id/emailCountTitle"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/dirt_yellow"
         android:text="0" />
+
+    <RelativeLayout
+        android:id="@+id/hashtagContainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@id/bottombtnContainer"
+        android:layout_below="@id/emailCountTitle"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/hash1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="-40dp"
+            android:layout_toStartOf="@id/hashtag1"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:text="#"
+            android:textColor="@color/blue" />
+
+        <EditText
+            android:id="@+id/hashtag1"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="40dp"
+            android:background="?attr/primary_bg_color"
+            android:fontFamily="@font/ubuntulight"
+            android:hint="hashtag1"
+            android:inputType="text"
+            android:text="gym"
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/hash2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/hashtag2"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:text="#"
+            android:textColor="@color/purple"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/hashtag2"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="40dp"
+            android:background="?attr/primary_bg_color"
+            android:fontFamily="@font/ubuntulight"
+            android:hint="hashtag2"
+            android:inputType="text"
+            android:text="workout"
+            android:textColor="@color/purple"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/hash3"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/hash1"
+            android:layout_marginEnd="-40dp"
+            android:layout_toStartOf="@id/hashtag3"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:text="#"
+            android:textColor="@color/pink2"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/hashtag3"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/hashtag1"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
+            android:background="?attr/primary_bg_color"
+            android:fontFamily="@font/ubuntulight"
+            android:hint="hashtag3"
+            android:inputType="text"
+            android:text="love"
+            android:textColor="@color/pink2"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/hash4"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/hash2"
+            android:layout_toStartOf="@id/hashtag4"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:text="#"
+            android:textColor="@color/green"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/hashtag4"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/hashtag2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="40dp"
+            android:background="?attr/primary_bg_color"
+            android:fontFamily="@font/ubuntulight"
+            android:hint="hashtag4"
+            android:inputType="text"
+            android:text="instagood"
+            android:textColor="@color/green"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/bottombtnContainer"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
-        android:background="@android:color/transparent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bottom_background"
+        android:elevation="3dp"
         android:gravity="center">
 
         <Button
-            android:id="@+id/btnModeSelector"
-            android:layout_width="wrap_content"
+            android:id="@+id/btnThreadSelector"
+            android:layout_width="75dp"
             android:layout_height="wrap_content"
-            android:text="lite" />
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:elevation="5dp"
+            android:fontFamily="@font/ubuntulight"
+            android:text="Thread: 1"
+            android:textAllCaps="false"
+            android:textColor="@color/darkGrey"
+            android:textSize="10sp"
+            android:textStyle="bold" />
 
-        <ToggleButton
-            android:id="@+id/btn_tagOrlocation"
-            android:layout_width="80dp"
+        <Button
+            android:id="@+id/btnModeSelector"
+            android:layout_width="65dp"
             android:layout_height="wrap_content"
-            android:textOff="Location"
-            android:textOn="Hashtag"
-            android:textSize="10sp" />
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:elevation="5dp"
+            android:fontFamily="@font/ubuntulight"
+            android:text="Lite"
+            android:textAllCaps="false"
+            android:textColor="@color/darkGrey"
+            android:textSize="10sp"
+            android:textStyle="bold" />
 
         <ToggleButton
             android:id="@+id/btn_start"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:text="Create sheet"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:elevation="5dp"
+            android:fontFamily="@font/ubuntulight"
+            android:textAllCaps="false"
+            android:textColor="@color/darkGrey"
             android:textOff="Start"
             android:textOn="Stop"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnSaveTask"
-            android:layout_width="60dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:elevation="5dp"
+            android:fontFamily="@font/ubuntulight"
             android:text="Save "
-            android:textSize="10sp" />
-        <Button
-            android:id="@+id/btnNext"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Next"
-            android:textSize="10sp" />
+            android:textAllCaps="false"
+            android:textColor="@color/darkGrey"
+            android:textSize="10sp"
+            android:textStyle="bold" />
 
+        <Button
+            android:id="@+id/btnSaveEmailTask"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:elevation="5dp"
+            android:fontFamily="@font/ubuntulight"
+            android:text="Save Email"
+            android:textAllCaps="false"
+            android:textColor="@color/darkGrey"
+            android:textSize="10sp"
+            android:textStyle="bold" />
     </LinearLayout>
 </RelativeLayout>

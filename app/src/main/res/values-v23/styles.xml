@@ -1,15 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Base application theme. -->
     <style name="LightTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/lightGrey</item>
-        <item name="colorPrimaryDark">@color/lightGrey</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="primary_bg_color">@color/white</item>
         <item name="secondary_bg_color">@color/white</item>
         <item name="primary_text_color">@color/darkGrey</item>
         <item name="secondary_text_color">@color/brown</item>
+        <item name="android:windowAnimationStyle">@style/WindowTransitionAnimation</item>
     </style>
 
     <style name="DarkTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
@@ -17,10 +19,16 @@
         <item name="colorPrimary">@color/darkGrey</item>
         <item name="colorPrimaryDark">@color/darkGrey</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="primary_bg_color">@color/darkGrey</item>
         <item name="secondary_bg_color">@color/lightGrey</item>
         <item name="primary_text_color">@color/white</item>
         <item name="secondary_text_color">@color/dirt_yellow</item>
+        <item name="android:windowAnimationStyle">@style/WindowTransitionAnimation</item>
     </style>
 
+    <style name="WindowTransitionAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
 </resources>

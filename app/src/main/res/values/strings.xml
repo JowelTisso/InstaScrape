@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">IScrape</string>
+    <string name="app_name">Insta Scrape</string>
+    <string name="thread_instructions"><font fgcolor='#FFD561D5'>Thread</font> : The number of coroutines/threads to perform task simultaneously</string>
+    <string name="warning_res"><font fgcolor='#FFD561D5'>Warning</font> : The more number of coroutines/threads, the more chances of getting blocked by the server</string>
+    <string name="mode_instructions"><font fgcolor='#FFD561D5'>Lite/Medium/Heavy</font> : Mode selector for the amount of data to be scraped</string>
+    <string name="lite_res"><font fgcolor='#FFD561D5'>Lite</font> : Fullname, Username, Follower Count, Following Count, Bio, Website Url, BusinessAccount, JointRecently, BusinessCategory, VerifiedAccount</string>
+    <string name="medium_res"><font fgcolor='#FFD561D5'>Medium</font> : Lite + Get captions of 12 posts/profile</string>
+    <string name="heavy_res"><font fgcolor='#FFD561D5'>Heavy</font> : Medium + Get 24 comments of 12 posts/profile</string>
+    <string name="start_res"><font fgcolor='#FFD561D5'>Start</font> : To start scraping the recent data from the given hashtag</string>
+    <string name="save_res"><font fgcolor='#FFD561D5'>Save</font> : To save the rough scraped data</string>
+    <string name="save_email_res"><font fgcolor='#FFD561D5'>Save Email</font> : To save the email existing scraped data</string>
+    <string name="disclaimer_res"><font fgcolor='#FFD561D5'>Disclaimer</font> : This App is made for Educational Purpose and is not intended for Commercial use.</string>
 </resources>

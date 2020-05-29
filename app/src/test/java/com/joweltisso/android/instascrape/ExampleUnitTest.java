@@ -1,4 +1,4 @@
-package com.example.android.iscrape;
+package com.joweltisso.android.instascrape;
 
 import org.junit.Test;
 

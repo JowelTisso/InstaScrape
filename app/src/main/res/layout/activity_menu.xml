@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="?attr/primary_bg_color"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MenuActivity">
+
+    <LinearLayout
+        android:id="@+id/aboutLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="JT"
+            android:textColor="@color/dirt_yellow"
+            android:textSize="54sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntulight"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:text="@string/disclaimer_res"
+            android:textColor="@color/blue"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:fontFamily="@font/ubuntulight"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:text="A static web scraping App for instagram. \nThis App focuses on email existing accounts\nwith popular hashtags.\nScraped Data can be saved in xls format."
+            android:textColor="@color/blue"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="InstaScrape"
+            android:textColor="@color/pink2"
+            android:textSize="19sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/instructionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="30dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Instructions"
+                android:textColor="@color/pink2"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntulight"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:text="@string/thread_instructions"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntulight"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:text="@string/warning_res"
+                android:textColor="@color/dirt_yellow"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntulight"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:text="@string/mode_instructions"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntulight"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:text="@string/lite_res"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntulight"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:text="@string/medium_res"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntulight"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:text="@string/heavy_res"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntulight"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:text="@string/start_res"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntulight"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:text="@string/save_res"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntulight"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:text="@string/save_email_res"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ToggleButton
+        android:id="@+id/btnAbout"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bottom_background"
+        android:textAllCaps="false"
+        android:textColor="@color/brown"
+        android:textOff="About"
+        android:textOn="About"
+        android:textSize="18sp" />
+
+    <ToggleButton
+        android:id="@+id/btnInstructions"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bottom_background"
+        android:textAllCaps="false"
+        android:textColor="@color/brown"
+        android:textOff="Instructions"
+        android:textOn="Instructions"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnPolicy"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bottom_background"
+        android:text="Privacy Policy"
+        android:textAllCaps="false"
+        android:textColor="@color/brown"
+        android:textSize="18sp" />
+</LinearLayout>

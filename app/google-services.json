@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "120558948825",
+    "firebase_url": "https://instascrape-3afc2.firebaseio.com",
+    "project_id": "instascrape-3afc2",
+    "storage_bucket": "instascrape-3afc2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120558948825:android:1fd564e99dfd3e54d849c8",
+        "android_client_info": {
+          "package_name": "com.joweltisso.android.instascrape"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120558948825-6b7ru4taodai1ongh42hhec55nadniu8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.joweltisso.android.instascrape",
+            "certificate_hash": "37a086779577e68ff37c3b58e37a66f7bdceb9a2"
+          }
+        },
+        {
+          "client_id": "120558948825-49eu5lf2sl01fraa2daj0g7984q9o4hm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.joweltisso.android.instascrape",
+            "certificate_hash": "971dfd80ca746691b98d76fdbd4b27ad5e671b80"
+          }
+        },
+        {
+          "client_id": "120558948825-0jvpck9emmp6b5v0bjjtso8v4lghf5q0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj8lekZ3y4fesbrbS0PDsN9djysD-zI7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "120558948825-0jvpck9emmp6b5v0bjjtso8v4lghf5q0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

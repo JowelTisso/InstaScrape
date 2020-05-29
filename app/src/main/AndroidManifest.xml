@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.iscrape">
+    package="com.joweltisso.android.instascrape">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
@@ -14,10 +14,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".SecondActivity"></activity>
+        android:theme="@style/Theme.AppCompat.DayNight">
         <activity
-            android:name=".MainActivity"
+            android:name="com.joweltisso.android.instascrape.MenuActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name="com.joweltisso.android.instascrape.MainActivity"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

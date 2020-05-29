@@ -1,15 +1,24 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('C:\\Users\\JOWEL\\AndroidStudioProjects\\KeyStore\\InstaScrape.jks')
+            storePassword 'jirsong123'
+            keyAlias = 'key0'
+            keyPassword 'jirsong123'
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
 
     defaultConfig {
-        applicationId "com.example.android.iscrape"
-        minSdkVersion 15
+        applicationId "com.joweltisso.android.instascrape"
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -21,6 +30,9 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable = true
+            multiDexEnabled = true
+            signingConfig signingConfigs.release
         }
     }
 
@@ -43,15 +55,9 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.5'
-    def arch_version = '2.3.0-alpha01'
+    def arch_version = '2.3.0-alpha03'
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$arch_version"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$arch_version"
-    implementation('com.google.api-client:google-api-client-android:1.23.0') {
-        exclude group: 'org.apache.httpcomponents'
-    }
-    implementation('com.google.apis:google-api-services-sheets:v4-rev581-1.25.0') {
-        exclude group: 'org.apache.httpcomponents'
-    }
     implementation 'com.google.android.gms:play-services-auth:18.0.0'
     implementation 'pub.devrel:easypermissions:0.3.0'
     implementation 'com.google.oauth-client:google-oauth-client-jetty:1.30.4'
@@ -59,6 +65,8 @@ dependencies {
     implementation files('libs/poi-ooxml-3.9-20121203.jar')
     implementation files('libs/poi-ooxml-schemas-3.9-20121203.jar')
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.3'
+    implementation 'com.google.firebase:firebase-analytics-ktx:17.4.2'
+    implementation 'com.google.firebase:firebase-crashlytics:17.0.0'
 }
 repositories {
     mavenCentral()
